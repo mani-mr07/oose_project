@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>student_home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .box {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">GrabJobs</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <u class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{url_for('student_login')}}">Logout</a>
+              </li>
+            </u>
+            </div>
+            <!-- Inside the navbar -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('student_login') }}">Logout</a>
+           </li>
+           <li class="nav-item">
+              <span class="nav-link">Welcome, {{ user_name }}</span>
+            </li>
+            </ul>
+
+          </div>  
+      </nav>
+      <br><br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="box">
+          <h2>Registered Exams</h2>
+          <p>View exams you have already registered for.</p>
+          <a href="{{url_for('student_view_exam')}}" class="btn btn-primary">View Exams</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="box">
+          <h2>Register for an Exam</h2>
+          <p>Register for new exams here.</p>
+          <a href="{{url_for('student_exam_register')}}" class="btn btn-primary">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
